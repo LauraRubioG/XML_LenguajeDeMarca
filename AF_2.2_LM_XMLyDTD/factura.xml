@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE facturas [
+
+   <!ELEMENT facturas (factura, dato_emisor, dato_cliente, detalle_factura)>
+   
+   <!ELEMENT factura (#PCDATA)>
+        <!ATTLIST factura numero CDATA #REQUIRED>
+        <!ATTLIST factura fecha CDATA #REQUIRED>
+   
+   <!ELEMENT dato_emisor (nombre, cif, telefono)>
+   <!ELEMENT dato_cliente (nombre, cif, telefono)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT cif (#PCDATA)>
+    <!ELEMENT telefono (#PCDATA)>
+    
+  <!ELEMENT detalle_factura (datos)+>   
+  <!ELEMENT datos (descripcion, cantidad, oferta?, pvp)>
+        <!ATTLIST datos codigo-artuculo ID #REQUIRED>
+        <!ATTLIST datos tipo (Libro | DVD | Varios) #IMPLIED>
+  <!ELEMENT descripcion (#PCDATA)>
+  <!ELEMENT cantidad (#PCDATA)>
+  <!ELEMENT oferta EMPTY>
+  <!ELEMENT pvp (#PCDATA)>
+        <!ATTLIST detalle_factura importe CDATA #REQUIRED>
+]>
+
+<facturas>
+    <factura numero="28" fecha="15/12/25"></factura>
+    <dato_emisor>
+        <nombre>Loco Polo</nombre>
+        <cif>739863y73899393u</cif>
+        <telefono>8626830303</telefono>
+    </dato_emisor>
+    <dato_cliente>
+        <nombre>Manolo Bakes</nombre>
+        <cif>739847483jdd9393</cif>
+        <telefono>729484839393</telefono>
+    </dato_cliente>
+    <detalle_factura  importe="98€">
+        <datos codigo-artuculo="C56" tipo="DVD">
+            <descripcion>factura numero 28 para el deposito</descripcion>
+            <cantidad>1</cantidad>
+            <pvp>40</pvp>
+        </datos>
+        <datos codigo-artuculo="C57">
+            <descripcion>factura numero 28 para el local</descripcion>
+            <cantidad>2</cantidad>
+            <oferta/>
+            <pvp>58</pvp>
+        </datos>
+    </detalle_factura>
+</facturas>
+
+
+
+
+
+<!-- Como emisor y cliente tienen los mismo datos hay que ponerlos arriba juntos y solo
+hace falta que pongamos una vez nombre, cif y telefono porqque se repiten -->
+
+<!-- <!ELEMENT dato_emisor (nombre, cif, telefono)>
+         <!ELEMENT nombre (#PCDATA)>
+         <!ELEMENT cif (#PCDATA)>
+         <!ELEMENT telefono (#PCDATA)>
+     <!ELEMENT dato_cliente (nombre, cif, telefono)>
+         <!ELEMENT nombre (#PCDATA)>
+         <!ELEMENT cif (#PCDATA)>
+         <!ELEMENT telefono (#PCDATA)>
+
+Es decir esto no estaría bien porque se repite, hay que ponerlo como arriba-->

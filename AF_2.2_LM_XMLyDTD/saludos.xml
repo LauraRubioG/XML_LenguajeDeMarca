@@ -9,7 +9,8 @@
       <!ATTLIST saludo idioma (ALE | FRA | ITA | POR) #IMPLIED>
 
 ]>
-
+<!-- en los atributos hay que ponerlo dentro del parentesis, y si
+añadir #loqueseanecesario, no ponemos ID porque sino es obligatorio-->
 <saludos>
     
     <saludo idioma="ALE">Hallo</saludo>

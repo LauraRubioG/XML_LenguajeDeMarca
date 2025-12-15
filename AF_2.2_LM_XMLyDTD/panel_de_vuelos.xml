@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE aeropuertos [
+
+   <!ELEMENT aeropuertos (nombre, datos, fecha_del_panel)>
+
+   <!ELEMENT nombre (#PCDATA)>
+   
+   <!ELEMENT datos (dato)+>
+
+   <!ELEMENT dato (diario?, origen, destino, hora_salida, hora_llegada)>
+   
+      <!ATTLIST dato codigo ID #REQUIRED>
+
+      <!ATTLIST dato estado (C | E | R) "E">
+   
+   <!ELEMENT diario EMPTY>
+   <!ELEMENT origen (#PCDATA)>
+   <!ELEMENT destino (#PCDATA)>
+   <!ELEMENT hora_salida (#PCDATA)>
+   <!ELEMENT hora_llegada (#PCDATA)>
+    
+   <!ELEMENT fecha_del_panel (#PCDATA)> 
+
+]>
+<aeropuertos>
+    
+    <nombre>Aeropuerto de Sevilla</nombre>
+    <datos>
+        <dato codigo="V1" estado="C">
+            <origen>Sevilla</origen>
+            <destino>London</destino>
+            <hora_salida>7:25</hora_salida>
+            <hora_llegada>11:54</hora_llegada>
+        </dato>
+        
+        <dato codigo="V2" estado="R">
+            <diario/>
+            <origen>Sevilla</origen>
+            <destino>Granada</destino>
+            <hora_salida>9:25</hora_salida>
+            <hora_llegada>10:54</hora_llegada>
+        </dato>
+    </datos>
+        
+    <fecha_del_panel>5/02/2023</fecha_del_panel>
+</aeropuertos>
