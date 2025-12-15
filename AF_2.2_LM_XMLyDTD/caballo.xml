@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE caballo [
+
+   <!ELEMENT caballo (nombre, raza, edad)>
+
+   <!ELEMENT nombre (#PCDATA)>
+
+   <!ELEMENT raza (#PCDATA)>
+
+   <!ELEMENT edad EMPTY>
+
+]>
+
+<caballo>
+<!-- hay que indicar todos los elementos puestos en el DTD  -->   
+    <nombre>Silvestre</nombre>
+    <raza>Morgan</raza>
+    <edad></edad>
+ <!-- empty significa salto de linea, no contiene nada -->  
+</caballo>

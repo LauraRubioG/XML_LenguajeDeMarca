@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mesa [
+
+   <!ELEMENT mesa ANY>
+
+   <!ELEMENT material (#PCDATA)>
+
+   <!ELEMENT color (#PCDATA)>
+
+]>
+<!-- hay que ponerlo en orden y bien estructurado con las equiquetas donde deben  -->
+<mesa>
+    <material>La mesa de madera</material>
+    <color>Es de color marrón</color>
+</mesa>
+

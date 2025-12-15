@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE viajes [
+
+   <!ELEMENT viajes (austria, italia, francia)>
+
+   <!ELEMENT austria (ciudad+)>
+
+   <!ELEMENT italia (ciudad+)>
+
+   <!ELEMENT francia (ciudad+)>
+
+   <!ELEMENT ciudad (#PCDATA)>
+
+]>
+<!-- cuanso es entre parentesis los elementos deben aparecer en el
+orden exacto especializado-->
+<viajes>
+<!-- Ponemos el elemento, dentro la ciudad que al tener el + ciudad
+    dentro tiene que aparecer minimo una vez hasta las veces que quiera
+    dentro, y dentro formato texto -->
+    <austria>
+        <ciudad>Viena</ciudad>
+    </austria>
+    
+    <italia>
+        <ciudad>Florencia</ciudad>
+        <ciudad>Roma</ciudad>
+        <ciudad>Venecia</ciudad>
+    </italia>
+    
+    <francia>
+        <ciudad>Paris</ciudad>
+    </francia>
+    
+</viajes>

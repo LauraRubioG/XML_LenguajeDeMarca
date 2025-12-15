@@ -1,2 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!DOCTYPE perifericos [
+
+   <!ELEMENT perifericos (#PCDATA)>
+
+]>
+
+<perifericos>
+    como no tiene simbolo solo aparece una vez, y podemos escribir
+    así porque es de tipo #PCDATA, que es tipo texto
+</perifericos>
+

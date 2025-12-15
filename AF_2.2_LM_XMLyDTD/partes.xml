@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE partes [
+
+   <!ELEMENT partes (secciones)>
+
+   <!ELEMENT secciones ANY>
+
+   <!ELEMENT letras (#PCDATA)>
+
+]>
+<!-- cuando es secciones se trata de poner informacion por secciones 
+    sobre el tema principal. Es este caso letras -->
+<partes>
+    <secciones>
+        <letras>abc</letras>
+    
+        <letras>MNT</letras> 
+    
+        <letras>xyz</letras>
+    </secciones>
+</partes>
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE perro [
+
+   <!ELEMENT perro (edad, nombre)>
+
+   <!ELEMENT edad (#PCDATA)>
+
+   <!ELEMENT nombre (#PCDATA)>
+
+]>
+
+<perro>
+ <!--  hay que ponerlos en orden de cmo está estipulado arriba -->
+    <edad>8</edad>
+    <nombre>Pancho</nombre>
+    
+</perro>
+

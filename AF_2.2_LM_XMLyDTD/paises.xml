@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE paises [
+
+   <!ELEMENT paises (pais, ciudad?)*>
+
+   <!ELEMENT pais (#PCDATA)>
+
+   <!ELEMENT ciudad (#PCDATA)>
+
+]>
+
+<paises>
+<!-- debe aparecer en orden paies ciudad
+    ciudad puede aparecer o no aparecer, opcional
+    pero ciudad solo puede aparecer una vez en caso de que salga
+    * pueden aparecer de forma repetida, PERO mismo ORDEN
+    por eso ciudad no podía salir mas de una vez seguida
+    o no salía o se esperaba a pais-->
+    <pais>italia</pais>
+    
+    <ciudad>florencia</ciudad>
+    
+    <pais>portugal</pais>
+    
+    <ciudad>lisboa</ciudad>
+    
+   <!-- <ciudad>oporto</ciudad> -->
+    
+    <pais>francia</pais>
+    
+    <!-- ejemplo de continiacion -->
+    <pais>españa</pais>
+    <ciudad> sevilla </ciudad>
+    
+    <pais>peru</pais>
+    <!-- no tiene porque tener ciudad obligatoriamente -->
+    
+    <pais>colombia</pais>
+    <ciudad>bogotá</ciudad>
+    
+</paises>
