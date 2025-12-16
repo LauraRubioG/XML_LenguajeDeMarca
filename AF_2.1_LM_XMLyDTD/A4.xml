@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE pedido [
+
+   <!ELEMENT pedido (cliente, producto+, nota_descuento?)>
+
+   <!ELEMENT cliente (#PCDATA)>
+
+   <!ELEMENT email (#PCDATA)>
+
+]>

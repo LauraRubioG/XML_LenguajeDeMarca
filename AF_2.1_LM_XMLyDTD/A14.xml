@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hospital [
+    <!ELEMENT hospital (sala)+>
+        <!ATTLIST sala numero ID #REQUIRED>
+    <!ELEMENT sala (paciente)+>
+    <!ELEMENT paciente (nombre, diagnostico, medicamento?)>
+        <!ATTLIST paciente sala IDREF #IMPLIED>
+        <!ELEMENT nombre (#PCDATA)>
+        <!ELEMENT diagnostico (#PCDATA)>
+        <!ELEMENT medicamento EMPTY>
+            <!ATTLIST medicamento dosis CDATA #REQUIRED>
+]>
+
+<hospital>
+    <sala numero="sala_1a">
+        <paciente sala="sala_1a">
+            <nombre>Ander</nombre>
+            <diagnostico>dolor de cabeza</diagnostico>
+            <medicamento dosis="ibuprofeno"/>
+        </paciente>
+        <paciente>
+            <nombre>Laura</nombre>
+            <diagnostico>dolor lumbar</diagnostico>
+        </paciente>
+    </sala>
+    <sala numero="sala_2b">
+        <paciente>
+            <nombre>Marta</nombre>
+            <diagnostico>dolor abdominal</diagnostico>
+        </paciente>
+        <paciente sala="sala_2b">
+            <nombre>Lucia</nombre>
+            <diagnostico>dolor de muelas</diagnostico>
+            <medicamento dosis="enantium"/>
+        </paciente>
+    </sala>
+</hospital>

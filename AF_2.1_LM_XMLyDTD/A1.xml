@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca [
+
+   <!ELEMENT biblioteca (libro)*>
+
+   <!ELEMENT libro (titulo, autor, precio)>
+
+   <!ELEMENT titulo (#PCDATA)>
+
+   <!ELEMENT autor (#PCDATA)>
+
+   <!ELEMENT precio (#PCDATA)>
+        <!ATTLIST precio moneda CDATA #REQUIRED>
+
+]>
+
+
+<biblioteca>
+    <libro>
+       <titulo>Aprende XML</titulo>
+       <autor>Ana García</autor>
+       <precio moneda="Euro">30</precio>
+   </libro>
+</biblioteca>
+
+
+Tu Respuesta:
+
+<!-- Escribe aquí tu código corregido -->

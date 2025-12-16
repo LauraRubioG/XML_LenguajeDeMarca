@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE usuario [
+
+   <!ELEMENT usuario (nombre, email)>
+
+   <!ELEMENT nombre (#PCDATA)>
+
+   <!ELEMENT email (#PCDATA)>
+
+]>

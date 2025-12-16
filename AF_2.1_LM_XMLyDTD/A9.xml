@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE clase [
+        <!ATTLIST clase curso CDATA #REQUIRED>
+    <!ELEMENT clase (alumno)*>
+    <!ELEMENT alumno (nombre, beca?)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT beca (#PCDATA)>
+]>
+
+<clase curso="1A">
+    <alumno>
+        <nombre>Juan</nombre>
+    </alumno>
+    <alumno>
+        <nombre>Marta</nombre>
+        <beca>Si</beca>
+    </alumno>
+</clase>

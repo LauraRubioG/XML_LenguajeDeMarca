@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!-- Actividad 5 -->
+<!ELEMENT menu((sopa | ensalada), postre)>
+
+<!-- Actividad 6 -->
+<!ATTLIST empleado id CDATA #REQUIRED>
+<!ATTLIST empleado puesto CDATA #IMPLIED>
+
+
+<!-- Actividad 7 -->
+<!ATTLIST tarea estado (pendiente | proceso | finalizada)"pendiente">
+
+<!ATTLIST dato estado (C | E | R) "E">
+
+
+<!-- Actividad 8 -->
+<ENTITY empresa "Soluciones Tecnológicas S.L."></ENTITY>
+<copyrigth>&empresa;</copyrigth>
+
+<!-- Actividad 9 -->
+
+
+<!-- Actividad 10 -->

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE agenda [
+    <!ELEMENT agenda (contacto)*>
+         <!ATTLIST contacto tipo (familiar | trabajo) #REQUIRED>
+    <!ELEMENT contacto (nombre, telefono, email?)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT telefono (#PCDATA)>
+    <!ELEMENT email (#PCDATA)>
+]>
+<agenda>
+    <contacto tipo="familiar">
+        <nombre>Ander</nombre>
+        <telefono>548332546</telefono>
+        <email>ander....@gmail.com</email>
+        
+    </contacto>
+    <contacto tipo="trabajo">
+        <nombre>Lucia</nombre>
+        <telefono>4896535</telefono>
+    </contacto>
+</agenda>
+
+<!DOCTYPE informe 
+<!DOCTYPE informe SYSTEM "reglas_empresa.dtd">
