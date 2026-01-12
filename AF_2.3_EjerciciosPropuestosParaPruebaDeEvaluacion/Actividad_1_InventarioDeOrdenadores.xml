@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE laboratorio [
+   <!ELEMENT laboratorio (nombre, fecha_de_revision, responsable)>
+   
+   <!ELEMENT nombre (#PCDATA)>
+   <!ELEMENT fecha_de_revision (#PCDATA)>
+   
+   <!ELEMENT responsable (nombre_responsable, cargo)>
+
+   <!ELEMENT nombre_responsable (#PCDATA)>
+   <!ELEMENT cargo (#PCDATA)>
+   
+   <!ELEMENT listado_de_equipos (procesador, memoria_RAM, disco)>
+   
+        <!ATTLIST listado_de_equipo equipo ID #REQUIRED>
+]>
