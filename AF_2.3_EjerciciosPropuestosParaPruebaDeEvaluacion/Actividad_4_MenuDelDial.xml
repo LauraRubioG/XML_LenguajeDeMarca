@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE menu [
+   <!ELEMENT menu (datosrestaurante, platos)>
+        <!ELEMENT datosrestaurante (nombrerestaurante, preciomenu)>
+            <!ELEMENT nombrerestaurante (#PCDATA)>
+            <!ELEMENT preciomenu (#PCDATA)>
+        <!ELEMENT platos (plato+)>
+            <!ELEMENT plato (nombre, ingredienteprincipal, vegano?)>
+                <!ATTLIST plato 
+                        codigo ID #REQUIRED
+                        tipo (entrante | principal | postre) #REQUIRED>
+                <!ELEMENT nombre (#PCDATA)>
+                <!ELEMENT ingredienteprincipal (#PCDATA)>
+                <!ELEMENT vegano EMPTY>
+]>
+
+<menu>
+    <datosrestaurante>
+        <nombrerestaurante>El Buen Sabor</nombrerestaurante>
+        <preciomenu>15.00€</preciomenu>
+    </datosrestaurante>
+    <platos>
+        <plato codigo="PL-01" tipo="entrante">
+            <nombre>Ensalada Mixta</nombre>
+            <ingredienteprincipal>Lechuga y Tomate</ingredienteprincipal>
+            <vegano/>
+        </plato>
+        <plato codigo="PL-02" tipo="principal">
+            <nombre>Filete con Patatas</nombre>
+            <ingredienteprincipal>Ternera</ingredienteprincipal>
+        </plato>
+        <plato codigo="PL-03" tipo="postre">
+            <nombre>Fruta del Tiempo</nombre>
+            <ingredienteprincipal>Variado</ingredienteprincipal>
+            <vegano/>
+        </plato>
+    </platos>
+</menu>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cartelera [
+   <!ELEMENT cartelera (cine, listadopeliculas)>
+        <!ELEMENT cine (nombre, ciudad)>
+            <!ELEMENT nombre (#PCDATA)>
+            <!ELEMENT ciudad (#PCDATA)>
+        <!ELEMENT listadopeliculas (peliculas+)>
+            <!ELEMENT peliculas (titulo, director, duracion, tresd?)>
+                <!ATTLIST peliculas 
+                        codigo ID #REQUIRED
+                        clasificacion (TP | M12 | M16 | M18) #REQUIRED> 
+                <!ELEMENT titulo (#PCDATA)>
+                <!ELEMENT director (#PCDATA)>
+                <!ELEMENT duracion (#PCDATA)>
+                <!ELEMENT tresd EMPTY>
+]>
+
+<cartelera>
+    <cine>
+        <nombre>Multicines Centro</nombre>
+        <ciudad>Madrid</ciudad>
+    </cine>
+    <listadopeliculas>
+        <peliculas codigo="P-01" clasificacion="TP">
+            <titulo>Avatar</titulo>
+            <director>J.Cameron</director>
+            <duracion>192min</duracion>
+            <tresd/>
+        </peliculas>
+        
+        <peliculas codigo="P-02" clasificacion="M12">
+            <titulo>Oppenheimer</titulo>
+            <director>C.Nolan</director>
+            <duracion>180min</duracion>
+        </peliculas>
+        
+        <peliculas codigo="P-03" clasificacion="TP">
+            <titulo>Barbie</titulo>
+            <director>G. Gerwing</director>
+            <duracion>114min</duracion>
+        </peliculas>
+    </listadopeliculas>
+</cartelera>

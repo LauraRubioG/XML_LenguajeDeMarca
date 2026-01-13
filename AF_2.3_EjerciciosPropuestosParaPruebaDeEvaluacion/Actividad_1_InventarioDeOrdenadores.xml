@@ -1,16 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE laboratorio [
-   <!ELEMENT laboratorio (nombre, fecha_de_revision, responsable)>
-   
-   <!ELEMENT nombre (#PCDATA)>
-   <!ELEMENT fecha_de_revision (#PCDATA)>
-   
-   <!ELEMENT responsable (nombre_responsable, cargo)>
-
-   <!ELEMENT nombre_responsable (#PCDATA)>
-   <!ELEMENT cargo (#PCDATA)>
-   
-   <!ELEMENT listado_de_equipos (procesador, memoria_RAM, disco)>
-   
-        <!ATTLIST listado_de_equipo equipo ID #REQUIRED>
+   <!ELEMENT laboratorio (nombre, responsable, listadodeequipos)>
+         <!ELEMENT nombre (nombrelaboratorio, fecharevision)>
+                 <!ELEMENT nombrelaboratorio (#PCDATA)>
+                 <!ELEMENT fecharevision (#PCDATA)>
+                 
+         <!ELEMENT responsable (nombreresponsable, cargo)>
+                 <!ELEMENT nombreresponsable (#PCDATA)>
+                 <!ELEMENT cargo (#PCDATA)>
+                 
+         <!ELEMENT listadodeequipos (equipo+)>
+                <!ELEMENT equipo (procesador, memoriaram, disco, tarjetagrafica?)>
+                <!ATTLIST equipo 
+                        idequipo ID #REQUIRED
+                        tipo (torre | portatil) #REQUIRED
+                        estado (operativo | mantenimiento | baja) "operativo">
+                <!ELEMENT procesador (#PCDATA)>
+                <!ELEMENT memoriaram (#PCDATA)>
+                <!ELEMENT disco (#PCDATA)>
+                <!ELEMENT tarjetagrafica EMPTY>
 ]>
+
+<laboratorio>
+        <nombre>
+                <nombrelaboratorio>laboratorio 1</nombrelaboratorio>
+                <fecharevision>15/01/2024</fecharevision>
+        </nombre>
+        <responsable>
+                <nombreresponsable>Ana García</nombreresponsable>
+                <cargo>Tecnico Superior</cargo>
+        </responsable>
+        <listadodeequipos>
+                <equipo idequipo="PC-001" tipo = "torre">
+                       <procesador>Intel i5</procesador>
+                       <memoriaram>16GB</memoriaram>
+                       <disco>500Gb</disco>
+                       <tarjetagrafica/>
+                </equipo>
+                <equipo idequipo="PC-002" tipo = "torre" estado="mantenimiento">
+                        <procesador>Intel i7</procesador>
+                        <memoriaram>32GB</memoriaram>
+                        <disco>1TB</disco>
+                </equipo>
+                <equipo idequipo="LT-105" tipo = "portatil">
+                        <procesador>AMD Ryzen 5</procesador>
+                        <memoriaram>8GB</memoriaram>
+                        <disco>256Gb</disco>
+                </equipo>
+        </listadodeequipos>
+</laboratorio>

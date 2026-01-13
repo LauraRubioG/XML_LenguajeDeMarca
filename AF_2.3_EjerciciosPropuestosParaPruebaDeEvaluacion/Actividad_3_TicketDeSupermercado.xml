@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ticket [
+   <!ELEMENT ticket (cabecera, listacompra)>
+        <!ELEMENT cabecera (supermercado, fecha)>
+            <!ELEMENT supermercado (#PCDATA)>
+            <!ELEMENT fecha (#PCDATA)>
+        <!ELEMENT listacompra (compra+)>
+            <!ELEMENT compra (nombre, cantidad, precio, productolocal?)>
+                <!ATTLIST compra 
+                        ref ID #REQUIRED
+                        iva (4 | 10 | 21) "21">
+                <!ELEMENT nombre (#PCDATA)>
+                <!ELEMENT cantidad (#PCDATA)>
+                <!ELEMENT precio (#PCDATA)>
+                <!ELEMENT productolocal EMPTY>
+]>
+<ticket>
+    <cabecera>
+        <supermercado>Mercado Express</supermercado>
+        <fecha>20/02/2024</fecha>
+    </cabecera>
+    <listacompra>
+        <compra ref="REF-101" iva="4">
+            <nombre>Leche Entera</nombre>
+            <cantidad>6</cantidad>
+            <precio>1.20</precio>
+            <productolocal/>
+        </compra>
+        <compra ref="REF-205">
+            <nombre>Champu</nombre>
+            <cantidad>1</cantidad>
+            <precio>3.50</precio>
+        </compra>
+        <compra ref="REF-300" iva="4">
+            <nombre>Pan de Molde</nombre>
+            <cantidad>2</cantidad>
+            <precio>1.80</precio>
+        </compra>
+    </listacompra>
+</ticket>
