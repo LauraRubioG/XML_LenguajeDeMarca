@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE torneo [
+    <!ELEMENT torneo (info-evento, inscritos)>
+        <!ELEMENT info-evento (nombre, fecha)>
+            <!ELEMENT nombre (#PCDATA)>
+            <!ELEMENT fecha (#PCDATA)>
+        <!ELEMENT inscritos (pajera+)>
+        <!ELEMENT pajera (jugador1, jugador2, socio-club?)>
+            <!ATTLIST pajera
+            id-inscripcion ID #REQUIRED
+            nivel (Iniciacion | Intermedio |Avanzado) #REQUIRED
+            pago (Si | No) "No">
+            <!ELEMENT jugador1 (#PCDATA)>
+            <!ELEMENT jugador2 (#PCDATA)>
+            <!ELEMENT socio-club EMPTY>
+                  
+]>
+
+<torneo>
+    <info-evento>
+        <nombre>Torneo de Padel</nombre>
+        <fecha>20/02/2026</fecha>
+    </info-evento>
+    <inscritos>
+        <pajera id-inscripcion="p_ins1" nivel="Avanzado" pago="No">
+            <jugador1>Ander Olivos</jugador1>
+            <jugador2>David Fernandez</jugador2>
+            <socio-club/>
+        </pajera>
+        <pajera id-inscripcion="p_ins2" nivel="Intermedio" pago="Si">
+            <jugador1>Roberto Montesori</jugador1>
+            <jugador2>Nicolas Berdel</jugador2>
+        </pajera>
+    </inscritos>
+</torneo>
